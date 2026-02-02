@@ -49,14 +49,14 @@ cargo install solana-txn-tui
 ### Using Homebrew (macOS/Linux)
 
 ```bash
-brew tap YOUR_USERNAME/solana-txn-tui
+brew tap Some1UKnow/solana-txn-tui
 brew install solana-txn-tui
 ```
 
 ### Build from Source
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/solana-txn-tui.git
+git clone https://github.com/Some1UKnow/solana-txn-tui.git
 cd solana-txn-tui
 cargo build --release
 ```
@@ -165,14 +165,14 @@ cargo test
 
 1. Create a new GitHub repository: `homebrew-solana-txn-tui`
 2. Add the formula file (see below)
-3. Users can then: `brew tap YOUR_USERNAME/solana-txn-tui && brew install solana-txn-tui`
+3. Users can then: `brew tap Some1UKnow/solana-txn-tui && brew install solana-txn-tui`
 
 **Formula Template:**
 ```ruby
 class SolanaTxnTui < Formula
   desc "Comprehensive TUI for exploring Solana transactions and accounts"
-  homepage "https://github.com/YOUR_USERNAME/solana-txn-tui"
-  url "https://github.com/YOUR_USERNAME/solana-txn-tui/archive/refs/tags/v0.1.0.tar.gz"
+  homepage "https://github.com/Some1UKnow/solana-txn-tui"
+  url "https://github.com/Some1UKnow/solana-txn-tui/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "SHA256_OF_RELEASE_TAR_GZ"
   license "MIT"
 
@@ -198,4 +198,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Support
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/YOUR_USERNAME/solana-txn-tui/issues).
+If you encounter any issues or have questions, please [open an issue](https://github.com/Some1UKnow/solana-txn-tui/issues).
