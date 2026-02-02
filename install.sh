@@ -58,11 +58,11 @@ echo "Downloading $ASSET_NAME from $LATEST_TAG..."
 
 # Check if we have write access to /usr/local/bin, otherwise use sudo
 if [ -w "$INSTALL_DIR" ]; then
-    curl -L -o "$DEST_FILE" "$DOWNLOAD_URL"
+    curl -fL -o "$DEST_FILE" "$DOWNLOAD_URL"
     chmod +x "$DEST_FILE"
 else
     echo "Need sudo access to install to $INSTALL_DIR"
-    sudo curl -L -o "$DEST_FILE" "$DOWNLOAD_URL"
+    sudo curl -fL -o "$DEST_FILE" "$DOWNLOAD_URL"
     sudo chmod +x "$DEST_FILE"
 fi
 
