@@ -32,9 +32,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Perl (Windows)
+      - name: Install Build Tools (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get update && sudo apt-get install -y build-essential pkg-config perl
+
+      - name: Set up Perl (Windows)
         if: matrix.os == 'windows-latest'
-        run: choco install activeperl -y
+        run: |
+          echo "C:\Strawberry\perl\bin" >> $env:GITHUB_PATH
+          echo "C:\Strawberry\c\bin" >> $env:GITHUB_PATH
 
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
