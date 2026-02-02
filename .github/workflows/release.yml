@@ -63,6 +63,8 @@ jobs:
         with:
           command: build
           args: --release --target ${{ matrix.target }}
+        env:
+          CARGO_BUILD_JOBS: 1
 
       - name: Prepare binary name
         shell: bash
