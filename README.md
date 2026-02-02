@@ -2,9 +2,6 @@
 
 A comprehensive Terminal User Interface (TUI) for exploring Solana transactions, accounts, and wallets on Mainnet, Devnet, and Testnet.
 
-![Version](https://img.shields.io/crates/v/solana-txn-tui)
-![License](https://img.shields.io/crates/l/solana-txn-tui)
-
 ## Features
 
 - **Multi-Network Support**: Switch between Mainnet, Devnet, and Testnet
