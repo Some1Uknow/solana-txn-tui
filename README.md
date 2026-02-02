@@ -152,42 +152,6 @@ solana-txn-tui/
 cargo test
 ```
 
-## Publishing (For Maintainers)
-
-### Publish to crates.io
-
-1. Update version in `Cargo.toml`
-2. Run tests: `cargo test`
-3. Dry run: `cargo publish --dry-run`
-4. Publish: `cargo publish`
-
-### Create Homebrew Formula
-
-1. Create a new GitHub repository: `homebrew-solana-txn-tui`
-2. Add the formula file (see below)
-3. Users can then: `brew tap Some1UKnow/solana-txn-tui && brew install solana-txn-tui`
-
-**Formula Template:**
-```ruby
-class SolanaTxnTui < Formula
-  desc "Comprehensive TUI for exploring Solana transactions and accounts"
-  homepage "https://github.com/Some1UKnow/solana-txn-tui"
-  url "https://github.com/Some1UKnow/solana-txn-tui/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "SHA256_OF_RELEASE_TAR_GZ"
-  license "MIT"
-
-  depends_on "rust" => :build
-
-  def install
-    system "cargo", "install", *std_cargo_args
-  end
-
-  test do
-    assert_match "solana-txn-tui", shell_output("#{bin}/solana-txn-tui --version")
-  end
-end
-```
-
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
