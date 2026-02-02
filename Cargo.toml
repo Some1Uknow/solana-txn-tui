@@ -28,4 +28,10 @@ anyhow = "1.0"
 chrono = "0.4"
 unicode-width = "0.1"
 bs58 = "0.5"
-openssl = { version = "0.10", features = ["vendored"] }
+
+[profile.release]
+strip = true      # Automatically strip symbols from the binary
+opt-level = "z"   # Optimize for size
+lto = true        # Link Time Optimization
+codegen-units = 1 # Reduce parallelism to save memory (and improve size)
+panic = "abort"   # Remove panic unwinding (smaller binary)
